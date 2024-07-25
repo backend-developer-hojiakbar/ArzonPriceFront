@@ -1,0 +1,306 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    width: 100%;
+  }
+  
+  .App {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 210vh;
+    overflow: hidden;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 20px;
+    background: linear-gradient(45deg, #4CAF50, #81C784);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-left {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .header-right {
+    font-size: 0.2rem;
+    font-weight: 200;
+    color: #f1f1f1;
+  }
+  
+  .main-section {
+    display: flex;
+    height: calc(100vh - 100px);
+    overflow: hidden;
+  }
+  
+  .upload-section {
+    flex: 0 0 250px;
+    padding: 20px;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+  }
+  
+  .upload-section h2 {
+    margin: 0 0 20px 0;
+  }
+  
+  .icon-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .icon-text {
+    margin-left: 10px;
+  }
+  
+  .upload-button {
+    display: block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .upload-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  .upload-button:active {
+    transform: scale(0.98);
+  }
+  
+  .file-list {
+    margin-top: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .file-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .file-icon {
+    margin-right: 10px;
+  }
+  
+  .columns-section {
+    display: flex;
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #fff;
+    overflow: hidden;
+  }
+  
+  .column {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 0 10px;
+    overflow-y: auto;
+  }
+  
+  .search-section {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .search-input {
+    width: calc(100% - 100px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+
+  .search-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .search-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  .search-button:active {
+    transform: scale(0.98);
+  }
+  
+  .search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    background-color: white;
+    z-index: 1;
+    border-radius: 0 0 5px 5px;
+  }
+  
+  .result-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .result-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .selected-table {
+    margin-top: 20px;
+  }
+  
+  .selected-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .selected-item:hover {
+    background-color: #e0f7e9;
+  }
+  
+  .footer {
+    text-align: center;
+    z-index: 1;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: black;
+    /* box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); */
+  }
+  
+  /* Ad Section */
+  .ad-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    height: 100px; /* Adjust as needed */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .results-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .search-results {
+    flex: 1;
+  }
+  .info-sidebar {
+    margin: -150px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 440px;
+    height: 50px;
+    flex: 0 0 200px;
+    color: #333333;
+    margin-left: 780px;
+  }
+  .ready-button {
+    display: block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .ready-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  .ready-button:active {
+    transform: scale(0.98);
+  }
+  .upload-section {
+    flex: 0 0 250px;
+    padding: 20px;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+    position: relative; /* Make the container relative for absolute positioning */
+  }
+  .search-section {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .search-input {
+    width: 99%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .search-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%; /* Make the button full-width to match the input */
+  }
+  .search-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  .search-button:active {
+    transform: scale(0.98);
+  }
+  
+  .search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    background-color: white;
+    z-index: 1;
+    border-radius: 0 0 5px 5px;
+  }
+  
