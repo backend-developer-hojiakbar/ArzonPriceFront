@@ -47,7 +47,7 @@ function App() {
         });
 
         try {
-            const response = await axios.post('http://127.0.0.1:8000/router/upload/upload/', formData, {
+            const response = await axios.post('https://backendap.cdpos.uz/router/upload/upload/', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
@@ -61,7 +61,7 @@ function App() {
     const handleSearch = async () => {
         if (searchInput.length > 0) {
             try {
-                const response = await axios.get(`http://127.0.0.1:8000/api/drugs/?q=${searchInput}`);
+                const response = await axios.get(`https://backendap.cdpos.uz/api/drugs/?q=${searchInput}`);
                 const filteredResults = response.data.filter(item => item.price >= MIN_PRICE_THRESHOLD);
                 setSearchResults(filteredResults);
             } catch (error) {

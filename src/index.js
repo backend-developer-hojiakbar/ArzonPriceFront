@@ -16,7 +16,7 @@ function Login() {
     const handleTokenSubmit = async () => {
         const csrfToken = getCSRFToken();
         try {
-            const response = await axios.post('http://127.0.0.1:8000/api/verify-token/', { token }, {
+            const response = await axios.post('https://backendap.cdpos.uz/api/verify-token/', { token }, {
                 headers: {
                     'X-CSRFToken': csrfToken,
                 },
